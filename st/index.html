@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>stock</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<style type="text/css">
+			#nb1,
+		#nb2,
+		#nb3,
+		#nb4,
+		#nb5,
+		#nb6,
+		#nb7 {
+			width: 100px;
+		}
+
+		.tot {
+			width: 100px;
+		}
+
+		#date {
+			width: 80px;
+		}
+
+		input {
+			width: 60px;
+		}
+
+		/* Firefox */
+		input[type=number] {
+			-moz-appearance: textfield;
+		}
+
+		/* Chrome */
+		input::-webkit-inner-spin-button,
+		input::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		/* Opéra*/
+		input::-o-inner-spin-button,
+		input::-o-outer-spin-button {
+			-o-appearance: none;
+			margin: 0
+		}
+	</style>
+</head>
+<body>
+	<div id="apps">
+
+<form name="fort" action="#">
+		<table id="tablecmup" class="table table-light table table-bordered">
+
+			<tr>
+				<th>dates</th>
+
+				<th>numero du bon</th>
+				<th colspan="3">entrées</th>
+				<th colspan="3">sorties</th>
+				<th colspan="3">stocks</th>
+			</tr>
+
+			<tr>
+				<td colspan="2"></td>
+
+				<td>Q</td>
+				<td>P.U</td>
+				<td>M</td>
+
+				<td>Q</td>
+				<td>P.U</td>
+				<td>M</td>
+
+				<td>Q</td>
+				<td>P.U</td>
+				<td>M</td>
+			</tr>
+			<tr>
+
+
+				<td><input type="text" id="date1"></td>
+				<td><input type="text" id="nb1"></td>
+				<td><input type="text" v-model="qe1" class="verif" name="qe1" value="0" id="qe1"></td>
+				<td><input type="text" v-model="pue1" class="verif" name="pue1" value="0" id="pue1"></td>
+				<td><input type="text" v-model="me1" class="verif" name="me1" value="0" id="me1"></td>
+
+				<td><input type="text" v-model="qs1" class="verif" name="qs1" value="0" id="qs1"></td>
+				<td><input type="text" v-model="pus1" class="verif" name="pus1" value="0" id="pus1"></td>
+				<td><input type="text" v-model="ms1" class="verif" name="ms1" value="0" id="ms1"></td>
+
+				<td><input type="text" v-model="qst1" class="verif" name="qst1" value="0" id="qst1"></td>
+				<td><input type="text" v-model="pust1" class="verif" name="pust1" value="0" id="pust1"></td>
+				<td><input type="text" v-model="mst1" class="verif" name="mst1" value="0" id="mst1"></td>
+
+			</tr>
+
+			<tr>
+
+				<td><input type="text" id="date2" id="date2"></td>
+				<td><input type="text" id="nb2" id="nb2"></td>
+				<td><input type="text" v-model="qe2" class="verif" name="qe2" value="0" id="qe2"></td>
+				<td><input type="text" v-model="pue2" class="verif" name="pue2" value="0" id="pue2"></td>
+				<td><input type="text" v-model="me2" class="verif" name="me2" value="0" id="me2"></td>
+
+				<td><input type="text" v-model="qs2" class="verif" name="qs2" value="0" id="qs2"></td>
+				<td><input type="text" v-model="pus2" class="verif" name="pus2" value="0" id="pus2"></td>
+				<td><input type="text" v-model="ms2" class="verif" name="ms2" value="0" id="ms2"></td>
+
+				<td><input type="text" v-model="qst2" class="verif" name="qst2" value="0" id="qst2"></td>
+				<td><input type="text" v-model="pust2" class="verif" name="pust2" value="0" id="pust2"></td>
+				<td><input type="text" v-model="mst2" class="verif" name="mst2" value="0" id="mst2"></td>
+
+			</tr>
+
+			<tr>
+
+				<td><input type="text" id="date3" id="date3"></td>
+				<td><input type="text" id="nb3" id="nb3"></td>
+				<td><input type="text" v-model="qe3" class="verif" name="qe3" value="0" id="qe3"></td>
+				<td><input type="text" v-model="pue3" class="verif" name="pue3" value="0" id="pue3"></td>
+				<td><input type="text" v-model="me3" class="verif" name="me3" value="0" id="me3"></td>
+
+				<td><input type="text" v-model="qs3" class="verif" name="qs3" value="0" id="qs3"></td>
+				<td><input type="text" v-model="pus3" class="verif" name="pus3" value="0" id="pus3"></td>
+				<td><input type="text" v-model="ms3" class="verif" name="ms3" value="0" id="ms3"></td>
+
+				<td><input type="text" v-model="qst3" class="verif" name="qst3" value="0" id="qst3"></td>
+				<td><input type="text" v-model="pust3" class="verif" name="pust3" value="0" id="pust3"></td>
+				<td><input type="text" v-model="mst3" class="verif" name="mst3" value="0" id="mst3"></td>
+			</tr>
+
+			<tr>
+
+				<td><input type="text" id="date4" id="date4"></td>
+				<td><input type="text" id="nb4" id="nb4"></td>
+				<td><input type="text" v-model="qe4" class="verif" name="qe4" value="0" id="qe4"></td>
+				<td><input type="text" v-model="pue4" class="verif" name="pue4" value="0" id="pue4"></td>
+				<td><input type="text" v-model="me4" class="verif" name="me4" value="0" id="me4"></td>
+
+				<td><input type="text" v-model="qs4" class="verif" name="qs4" value="0" id="qs4"></td>
+				<td><input type="text" v-model="pus4" class="verif" name="pus4" value="0" id="pus4"></td>
+				<td><input type="text" v-model="ms4" class="verif" name="ms4" value="0" id="ms4"></td>
+
+				<td><input type="text" v-model="qst4" class="verif" name="qst4" value="0" id="qst4"></td>
+				<td><input type="text" v-model="pust4" class="verif" name="pust4" value="0" id="pust4"></td>
+				<td><input type="text" v-model="mst4" class="verif" name="mst4" value="0" id="mst4"></td>
+
+			</tr>
+
+			<tr>
+
+				<td><input type="text" id="date5" id="date5"></td>
+				<td><input type="text" id="nb5" id="nb5"></td>
+				<td><input type="text" v-model="qe5" class="verif" name="qe5" value="0" id="qe5"></td>
+				<td><input type="text" v-model="pue5" class="verif" name="pue5" value="0" id="pue5"></td>
+				<td><input type="text" v-model="me5" class="verif" name="me5" value="0" id="me5"></td>
+
+				<td><input type="text" v-model="qs5" class="verif" name="qs5" value="0" id="qs5"></td>
+				<td><input type="text" v-model="pus5" class="verif" name="pus5" value="0" id="pus5"></td>
+				<td><input type="text" v-model="ms5" class="verif" name="ms5" value="0" id="ms5"></td>
+
+				<td><input type="text" v-model="qst5" class="verif" name="qst5" value="0" id="qst5"></td>
+				<td><input type="text" v-model="pust5" class="verif" name="pust5" value="0" id="pust5"></td>
+				<td><input type="text" v-model="mst5" class="verif" name="mst5" value="0" id="mst5"></td>
+			</tr>
+
+			<tr>
+
+				<td><input type="text" id="date6" id="date6"></td>
+				<td><input type="text" id="nb6" id="nb6"></td>
+				<td><input type="text" v-model="qe6" class="verif" name="qe6" value="0" id="qe6"></td>
+				<td><input type="text" v-model="pue6" class="verif" name="pue6" value="0" id="pue6"></td>
+				<td><input type="text" v-model="me6" class="verif" name="me6" value="0" id="me6"></td>
+
+				<td><input type="text" v-model="qs6" class="verif" name="qs6" value="0" id="qs6"></td>
+				<td><input type="text" v-model="pus6" class="verif" name="pus6" value="0" id="pus6"></td>
+				<td><input type="text" v-model="ms6" class="verif" name="ms6" value="0" id="ms6"></td>
+
+				<td><input type="text" v-model="qst6" class="verif" name="qst6" value="0" id="qst6"></td>
+				<td><input type="text" v-model="pust6" class="verif" name="pust6" value="0" id="pust6"></td>
+				<td><input type="text" v-model="mst6" class="verif" name="mst6" value="0" id="mst6"></td>
+			</tr>
+
+			<tr>
+
+				<td><input type="text" id="date7" id="date7"></td>
+				<td><input type="text" id="nb7" id="nb7"></td>
+				<td><input type="text" v-model="qe7" class="verif" name="qe7" value="0" id="qe7"></td>
+				<td><input type="text" v-model="pue7" class="verif" name="pue7" value="0" id="pue7"></td>
+				<td><input type="text" v-model="me7" class="verif" name="me7" value="0" id="me7"></td>
+
+				<td><input type="text" v-model="qs7" class="verif" name="qs7" value="0" id="qs7"></td>
+				<td><input type="text" v-model="pus7" class="verif" name="pus7" value="0" id="pus7"></td>
+				<td><input type="text" v-model="ms7" class="verif" name="ms7" value="0" id="ms7"></td>
+
+				<td><input type="text" v-model="qst7" class="verif" name="qst7" value="0" id="qst7"></td>
+				<td><input type="text" v-model="pust7" class="verif" name="pust7" value="0" id="pust7"></td>
+				<td><input type="text" v-model="mst7" class="verif" name="mst7" value="0" id="mst7"></td>
+			</tr>
+			<tr>
+				<td><input class="tot"></td>
+				<td><input class="tot" value="totaux"></td>
+				<td><input type="text" v-model="tqe" class="verif" name="tqe" value="0" id="tqe"></td>
+				<td><input type="text" v-model="tpue" class="verif" name="tpue" value="0" id="tpue"></td>
+				<td><input type="text" v-model="tme" class="verif" name="tme" value="0" id="tme"></td>
+
+				<td><input type="text" v-model="tqs" class="verif" name="tqs" value="0" id="tqs"></td>
+				<td><input type="text" v-model="tpus" class="verif" name="tpus" value="0" id="tpus"></td>
+				<td><input type="text" v-model="tms" class="verif" name="tms" value="0" id="tms"></td>
+
+				<td><input type="text" v-model="tqst" class="verif" name="tqst" value="0" id="tqst"></td>
+				<td><input type="text" v-model="tpust" class="verif" name="tpust" value="0" id="tpust"></td>
+				<td><input type="text" v-model="tmst" class="verif" name="tmst" value="0" id="tmst"></td>
+			</tr>
+
+		</table>
+		
+		<input type="button" style="width: 100px" class="btn btn-primary" name="" onclick="calculer()" value="calculer">
+			 	
+	</form>
+  
+	</div>
+
+	<script type="text/javascript">
+		function calculer(){
+          	//calcule totale M entrées
+				document.fort.tme.value = parseFloat(document.fort.me1.value) + parseFloat(document.fort.me2.value) + parseFloat(document.fort.me3.value) + parseFloat(document.fort.me4.value) + parseFloat(document.fort.me5.value) + parseFloat(document.fort.me6.value) + parseFloat(document.fort.me7.value);
+
+                //calcule total Q entrées
+				document.fort.tqe.value = parseFloat(document.fort.qe1.value) + parseFloat(document.fort.qe2
+						.value) + parseFloat(document.fort.qe3.value) +
+					parseFloat(document.fort.qe4.value) + parseFloat(document.fort.qe5.value) + parseFloat(
+						document.fort.qe6.value) + parseFloat(document.fort.qe7.value);
+
+					//calcule total Q sortie
+				document.fort.tqs.value = parseFloat(document.fort.qs1.value) + parseFloat(document.fort.qs2
+						.value) + parseFloat(document.fort.qs3.value) +
+					parseFloat(document.fort.qs4.value) + parseFloat(document.fort.qs5.value) + parseFloat(
+						document.fort.qs6.value) + parseFloat(document.fort.qs7.value);
+
+				document.fort.tms.value = parseFloat(document.fort.ms1.value) + parseFloat(document.fort.ms2
+						.value) + parseFloat(document.fort.ms3.value) +
+					parseFloat(document.fort.ms4.value) + parseFloat(document.fort.ms5.value) + parseFloat(
+						document.fort.ms6.value) + parseFloat(document.fort.ms7.value);
+
+						//calcule entrées M= Q * P.U
+				document.fort.me1.value = parseFloat(document.getElementById("qe1").value) * parseFloat(
+					document.fort.pue1.value);
+				document.fort.me2.value = parseFloat(document.getElementById("qe2").value) * parseFloat(
+					document.fort.pue2.value);
+				document.fort.me3.value = parseFloat(document.getElementById("qe3").value) * parseFloat(
+					document.fort.pue3.value);
+				document.fort.me4.value = parseFloat(document.getElementById("qe4").value) * parseFloat(
+					document.fort.pue4.value);
+				document.fort.me5.value = parseFloat(document.getElementById("qe5").value) * parseFloat(
+					document.fort.pue5.value);
+				document.fort.me6.value = parseFloat(document.getElementById("qe6").value) * parseFloat(
+					document.fort.pue6.value);
+				document.fort.me7.value = parseFloat(document.getElementById("qe7").value) * parseFloat(
+					document.fort.pue7.value);
+
+				//calcule stock M = Q*P.U
+				document.fort.mst1.value = parseFloat(document.getElementById("qst1").value) * parseFloat(
+					document.fort.pust1.value);
+				document.fort.mst2.value = parseFloat(document.getElementById("qst2").value) * parseFloat(
+					document.fort.pust2.value);
+				document.fort.mst3.value = parseFloat(document.getElementById("qst3").value) * parseFloat(
+					document.fort.pust3.value);
+				document.fort.mst4.value = parseFloat(document.getElementById("qst4").value) * parseFloat(
+					document.fort.pust4.value);
+				document.fort.mst5.value = parseFloat(document.getElementById("qst5").value) * parseFloat(
+					document.fort.pust5.value);
+				document.fort.mst6.value = parseFloat(document.getElementById("qst6").value) * parseFloat(
+					document.fort.pust5.value);
+				document.fort.mst7.value = parseFloat(document.getElementById("qst7").value) * parseFloat(
+					document.fort.pust7.value);
+
+				//calcule CMUP
+				var am1 = parseFloat(document.fort.mst1.value) + parseFloat(document.fort.tme.value);
+				var am2 = parseFloat(document.fort.qst1.value) + parseFloat(document.fort.tqe.value);
+				x = am1 / am2;
+				//arrondir à 2 chiffres après la virgule et la valeur entière la plus proche
+				var cmup = Math.round(x * 100) / 100;
+
+					//calcule sortie M = Q * cmup 
+				document.fort.ms1.value = parseFloat(document.getElementById("qs1").value) * cmup;
+				document.fort.ms2.value = parseFloat(document.getElementById("qs2").value) * cmup;
+				document.fort.ms3.value = parseFloat(document.getElementById("qs3").value) * cmup;
+				document.fort.ms4.value = parseFloat(document.getElementById("qs4").value) * cmup;
+				document.fort.ms5.value = parseFloat(document.getElementById("qs5").value) * cmup;
+				document.fort.ms6.value = parseFloat(document.getElementById("qs6").value) * cmup;
+				document.fort.ms7.value = parseFloat(document.getElementById("qs7").value) * cmup;
+
+
+				var str = document.forms['fort'].qe2.value;
+				if (str == 0) {
+					document.fort.qst2.value = document.fort.qst1.value - document.fort.qs2.value;
+
+				} else {
+					document.fort.qst2.value = document.fort.qe2.value + document.fort.qst1.value;
+				}
+				var str = document.forms['fort'].qe3.value;
+				if (str == 0) {
+					document.fort.qst3.value = document.fort.qst2.value - document.fort.qs3.value;
+
+				} else {
+					document.fort.qst3.value = parseFloat(document.fort.qe3.value) + parseFloat(document.fort
+						.qst2.value);
+				}
+				var str = document.forms['fort'].qe4.value;
+				if (str == 0) {
+					document.fort.qst4.value = document.fort.qst3.value - document.fort.qs4.value;
+
+				} else {
+					document.fort.qst4.value = parseFloat(document.fort.qe4.value) + parseFloat(document.fort
+						.qst3.value);
+				}
+
+				var str = document.forms['fort'].qe5.value;
+				if (str == 0) {
+					document.fort.qst5.value = document.fort.qst4.value - document.fort.qs5.value;
+
+				} else {
+					document.fort.qst5.value = parseFloat(document.fort.qe5.value) + parseFloat(document.fort
+						.qst4.value);
+				}
+				var str = document.forms['fort'].qe6.value;
+				if (str == 0) {
+					document.fort.qst6.value = document.fort.qst5.value - document.fort.qs6.value;
+
+				} else {
+					document.fort.qst6.value = parseFloat(document.fort.qe6.value) + parseFloat(document.fort
+						.qst5.value);
+				}
+				var str = document.forms['fort'].qe7.value;
+				if (str == 0) {
+					document.fort.qst7.value = document.fort.qst6.value - document.fort.qs7.value;
+
+				} else {
+					document.fort.qst7.value = parseFloat(document.fort.qe7.value) + parseFloat(document.fort
+						.qst6.value);
+				}
+				document.fort.tqst.value = document.fort.qst7.value;
+
+				document.fort.tpust.value = cmup;
+
+				document.fort.tmst.value = document.fort.tqst.value * document.fort.tpust.value;
+       
+
+					return false;
+		}
+
+
+	</script>
+</body>
+</html>
